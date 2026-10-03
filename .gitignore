@@ -1,0 +1,4 @@
+mynewenv/ 
+visual_env_setup.txt
+__pycache__/
+*.pyc
