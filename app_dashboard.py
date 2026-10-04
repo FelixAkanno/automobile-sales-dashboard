@@ -2,6 +2,7 @@ import dash
 from dash import dcc, html
 from dash.dependencies import Input, Output
 import pandas as pd
+import os
 import plotly.express as px
 
 
@@ -9,7 +10,10 @@ import plotly.express as px
 # Load data
 # ============================================================
 
-df = pd.read_csv("automobile-sales.csv")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_FILE = os.path.join(BASE_DIR, "automobile-sales.csv")
+
+df = pd.read_csv(DATA_FILE)
 
 
 # ============================================================
@@ -72,12 +76,39 @@ app.layout = html.Div([
     ]),
 
     html.Br(),
+   
 
     # Graph output area
     html.Div(
         id="output-container",
         className="chart-grid"
-    )
+    ),
+    
+    html.Br(),
+    html.Hr(),
+    html.Br(),
+    
+    # ========================================================
+    # Recession Sales Map
+    # ========================================================
+    
+html.H2(
+    "Recession Sales Map",
+    style={
+        "textAlign": "center",
+        "color": "#503D36"
+    }
+),
+
+html.Iframe(
+    src="/assets/recession_sales_map.html",
+    style={
+        "width": "100%",
+        "height": "650px",
+        "border": "none"
+    }
+)
+    
 ])
 
 
@@ -311,11 +342,11 @@ def update_output_container(selected_statistics, input_year):
             })
         ]
 
-
 # ============================================================
 # Run application
 # ============================================================
 
+server = app.server
+
 if __name__ == "__main__":
-    if __name__ == "__main__":
-        app.run(debug=True, port=8051)
+    app.run(debug=True, port=8051)
