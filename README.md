@@ -1,7 +1,6 @@
 # Automobile Sales Dashboard
 
-
-
+<img width="865" height="666" alt="image" src="https://github.com/user-attachments/assets/28acaf5b-1002-4dac-9518-27a269b0e02d" />
 
 
 ## Project Overview
