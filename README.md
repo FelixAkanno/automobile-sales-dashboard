@@ -1,5 +1,9 @@
 # Automobile Sales Dashboard
 
+
+
+
+
 ## Project Overview
 
 An interactive data analytics dashboard analyzing automobile sales trends and the relationship between automobile sales and recession periods.
@@ -35,6 +39,14 @@ The dashboard provides interactive visualizations for:
 
 * **Python**
 * **Pandas**
+* **Numpy**
+* **Matplotlib**
+* **Seaborn**
+* **Folium**
+* **json**
+* **io**
+* **pathlib**
+* **requests**
 * **Plotly**
 * **Dash**
 * **Jupyter Notebook**
