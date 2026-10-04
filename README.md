@@ -8,9 +8,6 @@ using Python, Pandas, Plotly, and Dash.
 ### 📊 Live Interactive Dashboard
 [Open Dashboard]
 
-### 🗺️ Interactive Recession Map
-[Open Map]
-
 ### 📓 Jupyter Notebook
 [View Analysis]
 
